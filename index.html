@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fishing Legends</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <audio controls autoplay loop>
+        <source src="mp3/leyendas de la pesca.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+    <div id="game-info">
+        <p id="score">Score: 0</p>
+        <p id="timer">Time: 3</p>
+    </div>
+
+    <!-- Modal de la historia -->
+    <div id="story-modal" class="modal">
+        <div class="modal-content">
+            <h2>Historia</h2>
+            <p>Hace mucho tiempo, un legendario pescador navegaba los mares en busca de la captura más grande que el mundo haya visto jamás, el pescador de nombre seiichi estaba en busca del pez conosido como, devorador de pescadores, es una bestia marina, que fue matando a miles de pescadores en todo el mundo. Ahora, es tu turno de tomar el timón y probar que puedes superar al pescador legendario y acabar con esta bestia de una ves por todad. ¿Serás capaz de atrapar al pez más grande y peligroso que el mundo haya visto, antes de que se te acabe el tiempo?</p>
+            <button id="next-button">Next</button>
+        </div>
+    </div>
+
+    <!-- Modal de las reglas -->
+    <div id="rules-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <h2>Reglas</h2>
+            <p>1. Debes tocar el pez antes de que el cronómetro llegue a 0.<br>
+               2. Al llegar a 600.000 golpes habras matado el pez y habras gananado el juego.<br>
+               3. Si el tiempo llega a 0, el juego termina.</p>
+            <button id="start-button">Start Game</button>
+        </div>
+    </div>
+
+    <!-- Área de juego -->
+    <div id="game-area">
+        <div id="fish"></div>
+    </div>
+
+    <!-- Modal de Game Over -->
+    <div id="game-over-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <h2>el pez te a devorado</h2>
+            <p id="final-score-message"></p>
+        </div>
+    </div>
+    <div id="diver"></div>
+
+<!-- Modal de la cárcel -->
+<div id="jail-modal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <h2>¡Irás a la cárcel por 50 años!</h2>
+        <p>Cargos:</p>
+        <ul>
+            <li>Entrar a área restringida</li>
+            <li>Asesinato con arma blanca</li>
+            <li>Pescar sin licencia</li>
+        </ul>
+        <button id="close-jail-modal">50 años despues, te an liberado y te dieron una licencia, ten mas cuidado</button>
+    </div>
+</div>
+
+    <script src="script/script.js"></script>
+</body>
+</html>
